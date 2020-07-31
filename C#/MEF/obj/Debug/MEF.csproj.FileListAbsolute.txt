@@ -1,0 +1,37 @@
+C:\Users\Enrique\Documents\Documentos de Programacion\Visual Studio 2013\Backup Manuales\InteligenciaArtificial\Cap2\MEF\obj\Debug\MEF.exe
+C:\Users\Enrique\Documents\Documentos de Programacion\Visual Studio 2013\Backup Manuales\InteligenciaArtificial\Cap2\MEF\obj\Debug\MEF.pdb
+C:\Users\Enrique\Documents\Documentos de Programacion\Visual Studio 2013\Backup Manuales\InteligenciaArtificial\Cap2\MEF\bin\Debug\MEF.exe
+C:\Users\Enrique\Documents\Documentos de Programacion\Visual Studio 2013\Backup Manuales\InteligenciaArtificial\Cap2\MEF\bin\Debug\MEF.pdb
+C:\Users\Enrique\Documents\Documentos de Programacion\Visual Studio 2013\Backup Manuales\InteligenciaArtificial\Cap2\MEF\obj\Debug\MEF.csprojResolveAssemblyReference.cache
+C:\Users\Enrique\Documents\Documentos de Programacion\Visual Studio 2013\Backup Manuales\InteligenciaArtificial\Cap2\MEF\obj\Debug\MEF.Form1.resources
+C:\Users\Enrique\Documents\Documentos de Programacion\Visual Studio 2013\Backup Manuales\InteligenciaArtificial\Cap2\MEF\obj\Debug\MEF.csproj.GenerateResource.Cache
+C:\Users\Enrique\Documents\Visual Studio 2017\Mis programas\Maquina de Estados Finitos\MEF\bin\Debug\MEF.exe.config
+C:\Users\Enrique\Documents\Visual Studio 2017\Mis programas\Maquina de Estados Finitos\MEF\bin\Debug\MEF.exe
+C:\Users\Enrique\Documents\Visual Studio 2017\Mis programas\Maquina de Estados Finitos\MEF\bin\Debug\MEF.pdb
+C:\Users\Enrique\Documents\Visual Studio 2017\Mis programas\Maquina de Estados Finitos\MEF\obj\Debug\MEF.csprojResolveAssemblyReference.cache
+C:\Users\Enrique\Documents\Visual Studio 2017\Mis programas\Maquina de Estados Finitos\MEF\obj\Debug\MEF.Form1.resources
+C:\Users\Enrique\Documents\Visual Studio 2017\Mis programas\Maquina de Estados Finitos\MEF\obj\Debug\MEF.csproj.GenerateResource.Cache
+C:\Users\Enrique\Documents\Visual Studio 2017\Mis programas\Maquina de Estados Finitos\MEF\obj\Debug\MEF.exe
+C:\Users\Enrique\Documents\Visual Studio 2017\Mis programas\Maquina de Estados Finitos\MEF\obj\Debug\MEF.pdb
+C:\Users\dani_\Downloads\Maquina de Estados Finitos\C#\MEF\bin\Debug\MEF.exe.config
+C:\Users\dani_\Downloads\Maquina de Estados Finitos\C#\MEF\bin\Debug\MEF.exe
+C:\Users\dani_\Downloads\Maquina de Estados Finitos\C#\MEF\bin\Debug\MEF.pdb
+C:\Users\dani_\Downloads\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.csprojAssemblyReference.cache
+C:\Users\dani_\Downloads\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.Form1.resources
+C:\Users\dani_\Downloads\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.csproj.GenerateResource.cache
+C:\Users\dani_\Downloads\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.csproj.CoreCompileInputs.cache
+C:\Users\dani_\Downloads\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.exe
+C:\Users\dani_\Downloads\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.pdb
+C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\bin\Debug\MEF.exe.config
+C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\bin\Debug\MEF.exe
+C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\bin\Debug\MEF.pdb
+C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.Inicio.resources
+C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.Principal.resources
+C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.Properties.Resources.resources
+C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.csproj.GenerateResource.cache
+C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.csproj.CoreCompileInputs.cache
+C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.exe
+C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.pdb
+C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.csprojAssemblyReference.cache
+C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.Derrota.resources
+C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.Victoria.resources
