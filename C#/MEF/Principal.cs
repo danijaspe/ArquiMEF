@@ -20,10 +20,9 @@ namespace MEF
         private Timer timer1;
         private IContainer components;
 
-        // Creamos un objeto para la maquina de estados finitos
-        private CMaquina heroe = new CMaquina();
 
-        // Objetos necesarios
+        //Objetos principales que componen el juego
+        private CMaquina heroe = new CMaquina();
         public S_objeto[] Monstruos = new S_objeto[10];
         public PictureBox[] PbMonstruo = new PictureBox[10];
         private MenuItem menuItem2;
@@ -36,28 +35,15 @@ namespace MEF
 
         public Principal()
         {
-            //
-            // Necesario para admitir el Diseñador de Windows Forms
-            //
+           
             InitializeComponent();
 
-            //
-            // TODO: agregar código de constructor después de llamar a InitializeComponent
-            //
-
-            // Inicializamos los objetos
-
-            // Cremos un objeto para tener valores aleatorios
             Random random = new Random();
-
-            // Recorremos todos los objetos
             for (int n = 0; n < 10; n++)
             {
-                // Agregando monstruos
+                // Se agrega y se activan los monstruos
                 Monstruos[n].x = random.Next(50, 620);
                 Monstruos[n].y = random.Next(50, 420);
-
-                // Lo indicamos activo
                 Monstruos[n].activo = true;
             }
             // Agregando vida
@@ -228,14 +214,8 @@ namespace MEF
         }
         #endregion
 
-        /// <summary>
-        /// Punto de entrada principal de la aplicación.
-        /// </summary>
-
-
         private void mnuSalir_Click(object sender, System.EventArgs e)
         {
-            // Cerramos la ventana y finalizamos la aplicacion
             Application.Exit();
         }
 
@@ -251,22 +231,17 @@ namespace MEF
 
         private void timer1_Tick(object sender, System.EventArgs e)
         {
-            // Esta funcion es el handler del timer
-            // Aqui tendremos la logica para actualizar nuestra maquina de estados
-
-            // Actualizamos a la maquina
             heroe.Control();
-
-            // Mandamos a redibujar la pantalla
             this.Invalidate();
-
+            
+            //Se valida si la maquina de estados finalizó en victoria o derrota
             if (heroe.EstadoM == (int)CMaquina.estados.MUERTO)
             {
                 timer1.Enabled = false;
                 Derrota muerte = new Derrota(this);
                 muerte.Show();
             }
-            else if (heroe.EstadoM == (int)CMaquina.estados.ALEATORIO)
+            else if (heroe.EstadoM == (int)CMaquina.estados.DETENIDO)
             {
                 timer1.Enabled = false;
                 Victoria exito = new Victoria(this);
@@ -276,7 +251,7 @@ namespace MEF
 
         private void Form1_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
         {
-            // Creamos la fuente y la brocha para el texto
+            // Se crean los elementos para dibujar, como las imágenes
             Font fuente = new Font("Arial", 16);
             SolidBrush brocha = new SolidBrush(Color.Black);
             Image warrior = Resources.warriorg;
@@ -285,17 +260,17 @@ namespace MEF
             Image dead = Resources.deadg;
 
 
-            // Dibujamos el robot
+            // Se dibuja el heroe, si está vivo o muerto
             if (heroe.EstadoM == (int)CMaquina.estados.MUERTO)
                 e.Graphics.DrawImage(dead, heroe.CoordX - 4, heroe.CoordY - 4, 50, 50);
             else
                 e.Graphics.DrawImage(warrior, heroe.CoordX - 4, heroe.CoordY - 4, 60, 60);
-            // Dibujamos los objetos
+            // Dibujamos los monstruos
             for (int n = 0; n < 10; n++)
                 if (Monstruos[n].activo == true)
                     e.Graphics.DrawImage(monster, Monstruos[n].x - 4, Monstruos[n].y - 4, 50, 50);
 
-            // Dibujamos la bateria
+            // Dibujamos la vida
                 e.Graphics.DrawImage(life, Vida.x - 4, Vida.y - 4, 35, 35);
             // Indicamos el estado en que se encuentra la maquina
             labelEstatus.Text = heroe.EstadoStr;
@@ -306,14 +281,12 @@ namespace MEF
         {
 
         }
-
         private void menuItem2_Click(object sender, EventArgs e)
         {
             this.Hide();
             Principal reinicio = new Principal();
             reinicio.Show();
         }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 

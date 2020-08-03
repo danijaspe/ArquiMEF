@@ -12,15 +12,15 @@ namespace MEF
 
 	public class CMaquina
 	{
-		// Enumeracion de los diferentes estados
+		// Diferentes estados que puede tomar el héroe
 		public enum  estados
 		{
 			BUSQUEDA,
 			NBUSQUEDA,
-			BUSCARVIDA,
+			BUSCARVIDA, 
 			CURARSE,
 			MUERTO,
-			ALEATORIO,
+			DETENIDO,
 		};
 
 		// Esta variable representa el estado actual de la maquina
@@ -33,10 +33,10 @@ namespace MEF
 		private S_objeto[] monstruos = new S_objeto[10];
 		private S_objeto cura;
 
-		// Variable del indice del objeto que buscamos
+		// Indice del objeto que se busca
 		private int indice;
 
-		// Variable para la energia;
+		// Aquí se guarda la energía
 		private int energia;
 
 		// Creamos las propiedades necesarias
@@ -49,22 +49,18 @@ namespace MEF
 		{
 			get {return y;}
 		}
-
 		public int EstadoM
 		{
 			get {return Estado;}
 		}
-
 		public String EstadoStr
 		{
 			get { return Estadotxt; }
 		}
-
 		public int VidaRestante
 		{
 			get { return energia; }
 		}
-
 		public CMaquina()
 		{
 
@@ -77,20 +73,18 @@ namespace MEF
 
 		public void Inicializa(ref S_objeto [] Pmonstruos, S_objeto Pcura)
 		{
-			// Colocamos una copia de los monstruos y la cura
-			// para pode trabajar internamente con la informacion
-			monstruos=Pmonstruos;
+			// Creamos una copia de los monstruos y la cura para trabajar con ellos en el programa
+			monstruos = Pmonstruos;
 			cura=Pcura;
 		}
 
 		public void Control()
 		{
-			// Esta funcion controla la logica principal de la maquina de estados
-			
+			// Aquí se hace todo el manejo de los estados
 			switch(Estado)
 			{
 				case (int)estados.BUSQUEDA:
-					// Llevamos a cabo la accion del estado
+					// Se procede a buscar el objetivo
 					Busqueda();
 
 					// Verificamos por transicion
@@ -105,7 +99,7 @@ namespace MEF
 
 					}
 					else if (energia < 400)
-					{// Checamos condicion de transicion
+					{// Cambiamos el estado si está bajo de vida
 						Estado = (int)estados.BUSCARVIDA;
 						Estadotxt = "Camino a recuperarse";
 
@@ -113,13 +107,13 @@ namespace MEF
 					break;
 
 				case (int)estados.NBUSQUEDA:
-					// Llevamos a cabo la accion del estado
+					// Se procede a localizar un nuevo objetivo
 					NuevaBusqueda();
 
-					// Verificamos por transicion
+					// Verificamos si no hay más monstruos
 					if (indice == -1)
-					{   // Si ya no hay monstruos, entonces aleatorio
-						Estado = (int)estados.ALEATORIO;
+					{   // Si ya no hay monstruos, entonces DETENIDO
+						Estado = (int)estados.DETENIDO;
 						Estadotxt = "Festejando";
 					}
 
@@ -128,10 +122,10 @@ namespace MEF
 						Estado = (int)estados.BUSQUEDA;
 						Estadotxt = "Camino al objetivo";
 					}
-
 					break;
 					
 				case (int)estados.BUSCARVIDA:
+					//Se selecciona como objetivo la vida para recuperarse
 					BUSCARVIDA();
 					if (x == cura.x && y == cura.y)
 					{
@@ -144,23 +138,19 @@ namespace MEF
 						Estado = (int)estados.MUERTO;
 						Estadotxt = "Fallecido";
 					}
-
 					break;
 
 				case (int)estados.CURARSE:
+					//Se llego a la cura y procede a reestablecer la energia
 					CURARSE();
 					Estado=(int)estados.BUSQUEDA;
+					//Vuelve por el objetivo buscado
 					Estadotxt = "Camino al objetivo";
 
 					break;
 
-				case (int)estados.MUERTO:
-					Muerto();					
-					break;
-
-				case (int)estados.ALEATORIO:
-					Aleatorio();
-
+				case (int)estados.DETENIDO:
+					DETENIDO();
 					if (energia == 0)
 					{
 						Estado = (int)estados.MUERTO;
@@ -174,6 +164,7 @@ namespace MEF
 
 		public void Busqueda()
 		{
+			//Se mueve hacia el objetivo y se resta energia
 			if(x<monstruos[indice].x)
 				x++;
 			else if(x>monstruos[indice].x)
@@ -188,6 +179,7 @@ namespace MEF
 
 		public void NuevaBusqueda()
 		{
+			//Se busca el proximo objetivo activo
 			indice=-1;
 			for(int n=0;n<10;n++)
 			{
@@ -196,8 +188,9 @@ namespace MEF
 			}
 		}
 
-		public void Aleatorio()
+		public void DETENIDO()
 		{
+			//Finaliza la caceria
 			Random random=new Random();
 			int nx=random.Next(0,3);
 			int ny=random.Next(0,3);
@@ -207,6 +200,7 @@ namespace MEF
 
 		public void BUSCARVIDA()
 		{
+			//Se moviliza hacia la cura
 			if(x<cura.x)
 				x++;
 			else if(x>cura.x)
@@ -221,11 +215,8 @@ namespace MEF
 
 		public void CURARSE()
 		{
+			//Restaura energia
 			energia=1000;
-		}
-
-		public void Muerto()
-		{
 		}
 
 
