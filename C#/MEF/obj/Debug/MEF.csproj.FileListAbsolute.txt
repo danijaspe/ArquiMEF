@@ -35,3 +35,16 @@ C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Pr
 C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.csprojAssemblyReference.cache
 C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.Derrota.resources
 C:\Users\dani_\OneDrive\Escritorio\UNIVERSITITINS\Arquitectura del computador\Práctica\Maquina de Estados Finitos\C#\MEF\obj\Debug\MEF.Victoria.resources
+C:\Users\dani_\OneDrive\Documentos\GitHub\ArquiMEF\C#\MEF\bin\Debug\MEF.exe.config
+C:\Users\dani_\OneDrive\Documentos\GitHub\ArquiMEF\C#\MEF\bin\Debug\MEF.exe
+C:\Users\dani_\OneDrive\Documentos\GitHub\ArquiMEF\C#\MEF\bin\Debug\MEF.pdb
+C:\Users\dani_\OneDrive\Documentos\GitHub\ArquiMEF\C#\MEF\obj\Debug\MEF.csprojAssemblyReference.cache
+C:\Users\dani_\OneDrive\Documentos\GitHub\ArquiMEF\C#\MEF\obj\Debug\MEF.Derrota.resources
+C:\Users\dani_\OneDrive\Documentos\GitHub\ArquiMEF\C#\MEF\obj\Debug\MEF.Victoria.resources
+C:\Users\dani_\OneDrive\Documentos\GitHub\ArquiMEF\C#\MEF\obj\Debug\MEF.Inicio.resources
+C:\Users\dani_\OneDrive\Documentos\GitHub\ArquiMEF\C#\MEF\obj\Debug\MEF.Principal.resources
+C:\Users\dani_\OneDrive\Documentos\GitHub\ArquiMEF\C#\MEF\obj\Debug\MEF.Properties.Resources.resources
+C:\Users\dani_\OneDrive\Documentos\GitHub\ArquiMEF\C#\MEF\obj\Debug\MEF.csproj.GenerateResource.cache
+C:\Users\dani_\OneDrive\Documentos\GitHub\ArquiMEF\C#\MEF\obj\Debug\MEF.csproj.CoreCompileInputs.cache
+C:\Users\dani_\OneDrive\Documentos\GitHub\ArquiMEF\C#\MEF\obj\Debug\MEF.exe
+C:\Users\dani_\OneDrive\Documentos\GitHub\ArquiMEF\C#\MEF\obj\Debug\MEF.pdb
