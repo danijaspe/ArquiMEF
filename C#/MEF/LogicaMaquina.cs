@@ -10,7 +10,7 @@ namespace MEF
 		public int x,y;		// Coordenadas del objeto
 	}
 
-	public class CMaquina
+	public class LogicaMaquina
 	{
 		// Diferentes estados que puede tomar el héroe
 		public enum  estados
@@ -37,7 +37,7 @@ namespace MEF
 		private int indice;
 
 		// Aquí se guarda la energía
-		private int energia;
+		private int vida;
 
 		// Creamos las propiedades necesarias
 		public int CoordX 
@@ -59,16 +59,16 @@ namespace MEF
 		}
 		public int VidaRestante
 		{
-			get { return energia; }
+			get { return vida; }
 		}
-		public CMaquina()
+		public LogicaMaquina()
 		{
 
 			Estado=(int)estados.NBUSQUEDA;	// Colocamos el estado de inicio.
 			x=320;		// Coordenada X
 			y=240;		// Coordenada Y
 			indice=-1;	// Empezamos como si no hubiera objeto a buscar
-			energia=800;
+			vida=800;
 		}
 
 		public void Inicializa(ref S_objeto [] Pmonstruos, S_objeto Pcura)
@@ -98,7 +98,7 @@ namespace MEF
 						Estadotxt = "Buscando nuevo objetivo";
 
 					}
-					else if (energia < 400)
+					else if (vida < 300)
 					{// Cambiamos el estado si está bajo de vida
 						Estado = (int)estados.BUSCARVIDA;
 						Estadotxt = "Camino a recuperarse";
@@ -133,7 +133,7 @@ namespace MEF
 						Estadotxt = "Recuperandose";
 					}
 
-					if (energia == 0)
+					if (vida == 0)
 					{
 						Estado = (int)estados.MUERTO;
 						Estadotxt = "Fallecido";
@@ -141,7 +141,7 @@ namespace MEF
 					break;
 
 				case (int)estados.CURARSE:
-					//Se llego a la cura y procede a reestablecer la energia
+					//Se llego a la cura y procede a reestablecer la vida
 					CURARSE();
 					Estado=(int)estados.BUSQUEDA;
 					//Vuelve por el objetivo buscado
@@ -151,7 +151,7 @@ namespace MEF
 
 				case (int)estados.DETENIDO:
 					DETENIDO();
-					if (energia == 0)
+					if (vida == 0)
 					{
 						Estado = (int)estados.MUERTO;
 						Estadotxt = "Fallecido";
@@ -164,7 +164,7 @@ namespace MEF
 
 		public void Busqueda()
 		{
-			//Se mueve hacia el objetivo y se resta energia
+			//Se mueve hacia el objetivo y se resta vida
 			if(x<monstruos[indice].x)
 				x++;
 			else if(x>monstruos[indice].x)
@@ -173,7 +173,7 @@ namespace MEF
 				y++;
 			else if(y>monstruos[indice].y)
 				y--;
-			energia--;
+			vida--;
 
 		}
 
@@ -209,14 +209,14 @@ namespace MEF
 				y++;
 			else if(y>cura.y)
 				y--;
-			energia--;
+			vida--;
 
 		}
 
 		public void CURARSE()
 		{
-			//Restaura energia
-			energia=1000;
+			//Restaura vida
+			vida=1000;
 		}
 
 

@@ -88,7 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="CMaquina.cs">
+    <Compile Include="LogicaMaquina.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Derrota.cs">
@@ -118,6 +118,7 @@
       <DependentUpon>Victoria.cs</DependentUpon>
     </Compile>
     <Content Include="App.ico" />
+    <None Include="Resources\mainlogog_gX1_icon.ico" />
     <None Include="Resources\victory.png" />
     <EmbeddedResource Include="Derrota.resx">
       <DependentUpon>Derrota.cs</DependentUpon>

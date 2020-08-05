@@ -20,9 +20,8 @@ namespace MEF
         private Timer timer1;
         private IContainer components;
 
-
         //Objetos principales que componen el juego
-        private CMaquina heroe = new CMaquina();
+        private LogicaMaquina heroe = new LogicaMaquina();
         public S_objeto[] Monstruos = new S_objeto[10];
         public PictureBox[] PbMonstruo = new PictureBox[10];
         private MenuItem menuItem2;
@@ -31,6 +30,14 @@ namespace MEF
         private PictureBox pictureBox2;
         private Label labelHealth;
         public S_objeto Vida;
+
+        // Se crean los elementos para dibujar, como las imágenes
+        Font fuente = new Font("Arial", 16);
+        SolidBrush brocha = new SolidBrush(Color.Black);
+        Image warrior = Resources.warriorg;
+        Image monster = Resources.devil;
+        Image life = Resources.lifeg;
+        Image dead = Resources.deadg;
 
 
         public Principal()
@@ -235,13 +242,13 @@ namespace MEF
             this.Invalidate();
             
             //Se valida si la maquina de estados finalizó en victoria o derrota
-            if (heroe.EstadoM == (int)CMaquina.estados.MUERTO)
+            if (heroe.EstadoM == (int)LogicaMaquina.estados.MUERTO)
             {
                 timer1.Enabled = false;
                 Derrota muerte = new Derrota(this);
                 muerte.Show();
             }
-            else if (heroe.EstadoM == (int)CMaquina.estados.DETENIDO)
+            else if (heroe.EstadoM == (int)LogicaMaquina.estados.DETENIDO)
             {
                 timer1.Enabled = false;
                 Victoria exito = new Victoria(this);
@@ -251,17 +258,8 @@ namespace MEF
 
         private void Form1_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
         {
-            // Se crean los elementos para dibujar, como las imágenes
-            Font fuente = new Font("Arial", 16);
-            SolidBrush brocha = new SolidBrush(Color.Black);
-            Image warrior = Resources.warriorg;
-            Image monster = Resources.devil;
-            Image life = Resources.lifeg;
-            Image dead = Resources.deadg;
-
-
             // Se dibuja el heroe, si está vivo o muerto
-            if (heroe.EstadoM == (int)CMaquina.estados.MUERTO)
+            if (heroe.EstadoM == (int)LogicaMaquina.estados.MUERTO)
                 e.Graphics.DrawImage(dead, heroe.CoordX - 4, heroe.CoordY - 4, 50, 50);
             else
                 e.Graphics.DrawImage(warrior, heroe.CoordX - 4, heroe.CoordY - 4, 60, 60);
